@@ -1,0 +1,48 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav h1{
+  font-size: 4rem;
+  color: blueviolet;
+}
+
+ .nav .nav-search{
+  display: flex;
+  flex: 1;
+  margin: 0 5%;
+}
+
+.nav .nav-search .search-input{
+  flex: 1;
+  border: 1px solid blueviolet;
+  border-right: none;
+  color: blueviolet;
+  height: 3.3rem;
+  padding: 1rem;
+}
+
+.nav .nav-search .search-btn{
+  border: 1px solid blueviolet;
+  border-left: none;
+  height: 3.3rem;
+  color: blueviolet;
+  padding: 1rem;
+}
+
+.nav .nav-links{
+  list-style-type: none;
+  display: inline-flex;
+}
+
+.nav .nav-links .link{
+  padding: 0 1.5rem;
+}
+
+.nav .nav-links .link a{
+  text-decoration: none;
+  color: blueviolet;
+  font-size: 1.6rem;
+}
