@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Seller } from 'src/app/models/seller';
 import { SellerService } from 'src/app/services/seller.service';
@@ -8,12 +8,14 @@ import { SellerService } from 'src/app/services/seller.service';
   templateUrl: './seller-auth.component.html',
   styleUrls: ['./seller-auth.component.css'],
 })
-export class SellerAuthComponent {
+export class SellerAuthComponent implements OnInit{
   constructor(private sellerService: SellerService, private router: Router) {}
 
+  ngOnInit():void{
+    this.sellerService.reloadSeller();
+  }
+
   signUp(data: Seller): void {
-    this.sellerService.addSeller(data).subscribe((response: any) => {
-      if (response) this.router.navigate(['']);
-    });
+    this.sellerService.addSeller(data);
   }
 }
