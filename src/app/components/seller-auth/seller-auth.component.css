@@ -1,4 +1,4 @@
-.sign-up{
+.sign-up, .login{
   text-align: center;
   margin: 12rem 0;
 }
@@ -7,4 +7,12 @@ h1{
   color: blueviolet;
   font-size: 3.5rem;
   margin-bottom: 2rem;
+}
+
+.auth-toggle-link{
+  color: blueviolet;
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  text-align: left;
+  cursor: pointer;
 }
