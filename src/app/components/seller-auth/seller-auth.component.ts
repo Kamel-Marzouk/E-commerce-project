@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Login, Seller } from 'src/app/models/seller';
+import { Login, SignUp } from 'src/app/models/seller';
 import { SellerService } from 'src/app/services/seller.service';
 
 @Component({
@@ -17,7 +17,7 @@ export class SellerAuthComponent implements OnInit {
     this.sellerService.reloadSeller();
   }
 
-  signUp(data: Seller): void {
+  signUp(data: SignUp): void {
     this.sellerService.addSeller(data);
   }
 

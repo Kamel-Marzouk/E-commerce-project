@@ -1,6 +1,6 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Seller, Login } from './../models/seller';
+import { SignUp, Login } from './../models/seller';
 import { Observable, BehaviorSubject } from 'rxjs';
 import { Router } from '@angular/router';
 
@@ -14,7 +14,7 @@ export class SellerService {
 
   constructor(private http: HttpClient, private router: Router) {}
 
-  addSeller(data: Seller): void {
+  addSeller(data: SignUp): void {
     this.http
       .post(`${this.baseUrl}/seller`, data, { observe: 'response' })
       .subscribe((result: any) => {

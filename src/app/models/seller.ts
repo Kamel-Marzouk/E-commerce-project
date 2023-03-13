@@ -1,4 +1,4 @@
-export interface Seller{
+export interface SignUp{
   name:string,
   password:string,
   email:string
