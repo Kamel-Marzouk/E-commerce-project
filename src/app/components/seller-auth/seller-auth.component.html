@@ -37,6 +37,7 @@
   <!-- Login Area -->
   <div *ngIf="showLogin" class="login">
     <h1>Seller Login</h1>
+    <p *ngIf="authError" class="error-p">{{authError}}</p>
     <form
       #sellerLogin="ngForm"
       (ngSubmit)="login(sellerLogin.value)"
@@ -58,7 +59,7 @@
       />
       <button class="form-button">Login</button>
       <a class="auth-toggle-link" (click)="openSignUp()"
-        >Don't Have Account? Click To Sign-Up</a
+        >Don't Have Account? Click For Sign-Up</a
       >
     </form>
   </div>
