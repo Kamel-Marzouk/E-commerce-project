@@ -13,11 +13,11 @@
   margin: 0 auto;
 }
 
-input{
+input {
   font-size: 1.6rem;
 }
 
-button{
+button {
   font-size: 2rem;
 }
 
@@ -40,4 +40,18 @@ button{
   color: blueviolet;
   height: 3.5rem;
   cursor: pointer;
+}
+
+.error-p,
+.message-p {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.error-p {
+  color: red;
+}
+
+.message-p {
+  color: green;
 }

@@ -30,5 +30,34 @@
       "email": "belal@gmail.com",
       "id": 5
     }
+  ],
+  "products": [
+    {
+      "name": "T-Shirt",
+      "price": "750",
+      "color": "red",
+      "category": "clothes",
+      "description": "nice T-shirt",
+      "image": "https://img.mytheresa.com/1088/1088/66/jpeg/catalog/product/91/P00437309.jpg",
+      "id": 1
+    },
+    {
+      "name": "I-phone 5",
+      "price": "17000",
+      "color": "black",
+      "category": "Mobiles",
+      "description": "nice phone",
+      "image": "https://lcdn.altex.ro/resize/media/catalog/product/T/e/2bd48d28d1c32adea0e55139a4e6434a/Telefon_APPLE_iPhone_13_5G_128GB_Midnight_4_.jpg",
+      "id": 2
+    },
+    {
+      "name": "jacket",
+      "color": "green",
+      "price": "1500",
+      "category": "clothes",
+      "description": "nice coat",
+      "image": "https://i.factcool.com/cache2/1400x1400/catalog/products/6/cc/556-cc-55027ce920221128131429_9911111202553.jpg",
+      "id": 3
+    }
   ]
 }
