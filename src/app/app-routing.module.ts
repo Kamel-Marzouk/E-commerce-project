@@ -6,6 +6,7 @@ import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.co
 import { LoginComponent } from './components/login/login.component';
 import { CartComponent } from './components/cart/cart.component';
 import { AuthGuard } from './guards/auth.guard';
+import { SellerHomeComponent } from './components/seller-home/seller-home.component';
 
 const routes: Routes = [
   {
@@ -14,7 +15,11 @@ const routes: Routes = [
   },
   {
     path:'seller-auth',
-    component:SellerAuthComponent,
+    component:SellerAuthComponent
+  },
+  {
+    path:'seller-home',
+    component:SellerHomeComponent,
     canActivate:[AuthGuard]
   },
   {

@@ -11,6 +11,7 @@ import { LoginComponent } from './components/login/login.component';
 import { CartComponent } from './components/cart/cart.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { SellerHomeComponent } from './components/seller-home/seller-home.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     SellerAuthComponent,
     PagenotfoundComponent,
     LoginComponent,
-    CartComponent
+    CartComponent,
+    SellerHomeComponent
   ],
   imports: [
     BrowserModule,
