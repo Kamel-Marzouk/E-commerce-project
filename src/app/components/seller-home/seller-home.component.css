@@ -1,0 +1,28 @@
+.product-list{
+  margin: 4rem 0;
+}
+
+h1{
+  font-size: 3.5rem;
+  color: blueviolet;
+  margin-bottom: 2rem;
+}
+
+table {
+  text-align: left;
+  color: blueviolet;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  border: 1px solid blueviolet;
+  padding: 1rem;
+  min-height: 16rem;
+  color: blueviolet;
+}
+
+img {
+  width: 5rem;
+  height: 5rem;
+}
