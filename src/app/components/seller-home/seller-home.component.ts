@@ -9,6 +9,7 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class SellerHomeComponent implements OnInit {
   allProducts: undefined | Product[];
+  productMessage: undefined | string;
 
   constructor(private productService: ProductService) {}
 
@@ -22,4 +23,12 @@ export class SellerHomeComponent implements OnInit {
     });
   }
 
+  deleteProduct(productId: number) {
+    this.productService.deleteProduct(productId).subscribe((result: any) => {
+      if (result) this.productMessage = 'Product is successfully deleted'; this.getAllProducts();
+      setTimeout(() => {
+        this.productMessage = undefined;
+      }, 3000);
+    });
+  }
 }

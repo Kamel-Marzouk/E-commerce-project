@@ -26,3 +26,10 @@ img {
   width: 5rem;
   height: 5rem;
 }
+
+button{
+  font-size: 1rem;
+  color: blueviolet;
+  border: 1px solid blueviolet;
+  padding: 0.5rem 1rem;
+}
