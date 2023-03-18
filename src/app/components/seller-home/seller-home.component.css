@@ -33,3 +33,7 @@ button{
   border: 1px solid blueviolet;
   padding: 0.5rem 1rem;
 }
+
+.adjust-update-link{
+  margin-inline-start: 1rem;
+}
