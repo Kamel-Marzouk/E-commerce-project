@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 import { Product } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
 
@@ -10,6 +11,7 @@ import { ProductService } from 'src/app/services/product.service';
 export class SellerHomeComponent implements OnInit {
   allProducts: undefined | Product[];
   productMessage: undefined | string;
+  icon = faTrash;
 
   constructor(private productService: ProductService) {}
 
@@ -25,7 +27,8 @@ export class SellerHomeComponent implements OnInit {
 
   deleteProduct(productId: number) {
     this.productService.deleteProduct(productId).subscribe((result: any) => {
-      if (result) this.productMessage = 'Product is successfully deleted'; this.getAllProducts();
+      if (result) this.productMessage = 'Product is successfully deleted';
+      this.getAllProducts();
       setTimeout(() => {
         this.productMessage = undefined;
       }, 3000);
