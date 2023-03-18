@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-seller-update-product',
@@ -10,6 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class SellerUpdateProductComponent implements OnInit {
   productData: undefined | Product;
+  productMessage: undefined | string;
 
   constructor(
     private route: ActivatedRoute,
@@ -31,7 +32,13 @@ export class SellerUpdateProductComponent implements OnInit {
   }
 
   submit(data: Product) {
-   console.log(data);
+    if (this.productData) data.id = this.productData.id;
+    this.productService.updateProduct(data).subscribe((result) => {
+      if (result) this.productMessage = 'Product has updated successfuly';
+      setTimeout(() => {
+        this.productMessage = undefined;
+      }, 3000);
+    });
   }
 
 }
