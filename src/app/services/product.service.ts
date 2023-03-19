@@ -35,4 +35,8 @@ export class ProductService {
     return this.http.get<Product[]>(`${this.baseUrl}/products?limit=3`);
   }
 
+  getTrendyProducts(): Observable<any> {
+    return this.http.get<Product[]>(`${this.baseUrl}/products?limit=8`);
+  }
+
 }

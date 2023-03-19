@@ -9,16 +9,24 @@ import { Product } from './../../models/product';
 })
 export class HomeComponent {
   popularProducts: undefined | Product[];
+  trendyProducts: undefined | Product[];
 
   constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
     this.getPopularProducts();
+    this.getTrendyProducts();
   }
 
   private getPopularProducts(): void {
     this.productService.popularProducts().subscribe((data: Product[]) => {
       this.popularProducts = data;
+    });
+  }
+
+  private getTrendyProducts(): void {
+    this.productService.getTrendyProducts().subscribe((data: Product[]) => {
+      this.trendyProducts = data;
     });
   }
 
