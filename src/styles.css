@@ -54,3 +54,18 @@ button {
 .message-p {
   color: green;
 }
+
+.carousel-caption {
+  background-color: #00000082;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  background-color: black;
+  border: 5px;
+}

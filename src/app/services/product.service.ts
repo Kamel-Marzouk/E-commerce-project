@@ -31,4 +31,8 @@ export class ProductService {
     return this.http.put(`${this.baseUrl}/products/${product.id}`, product);
   }
 
+  popularProducts(): Observable<any> {
+    return this.http.get<Product[]>(`${this.baseUrl}/products?limit=3`);
+  }
+
 }

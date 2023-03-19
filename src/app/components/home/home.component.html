@@ -1,1 +1,15 @@
-<h1>Home Page</h1>
+<ngb-carousel *ngIf="popularProducts?.length">
+  <ng-template *ngFor="let product of popularProducts" ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img
+        class="product-header-img"
+        [src]="product.image"
+        alt="Product slide"
+      />
+    </div>
+    <div class="carousel-caption">
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.description }}</p>
+    </div>
+  </ng-template>
+</ngb-carousel>
