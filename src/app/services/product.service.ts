@@ -39,4 +39,8 @@ export class ProductService {
     return this.http.get<Product[]>(`${this.baseUrl}/products?limit=8`);
   }
 
+  searchProducts(query:string): Observable<any> {
+    return this.http.get<Product[]>(`${this.baseUrl}/products?q=${query}`);
+  }
+
 }

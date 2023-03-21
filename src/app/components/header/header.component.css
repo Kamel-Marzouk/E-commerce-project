@@ -49,3 +49,25 @@
   color: blueviolet;
   font-size: 1.6rem;
 }
+
+.suggested-result {
+  list-style-type: none;
+  position: absolute;
+  top: 40px;
+  width: 300px;
+  display: list-item!important;
+  z-index: 10;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 0;
+}
+
+.suggested-result li {
+  border: 1px solid #ddd;
+  padding: 1rem;
+}
+
+.suggested-result li a {
+  cursor: pointer;
+  color: blueviolet;
+}
