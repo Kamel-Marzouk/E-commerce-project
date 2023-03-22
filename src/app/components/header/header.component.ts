@@ -52,4 +52,9 @@ export class HeaderComponent implements OnInit {
   hideSearch(): void {
     this.searchReasult = undefined;
   }
+
+  submitSearch(value:string):void{
+    this.router.navigate([`search/${value}`]);
+  }
+
 }
