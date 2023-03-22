@@ -23,3 +23,8 @@
 .search-item span{
   margin-right: 1rem;
 }
+
+.no-data-found{
+  text-align: center;
+  margin: 14rem;
+}
