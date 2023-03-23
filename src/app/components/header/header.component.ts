@@ -53,6 +53,10 @@ export class HeaderComponent implements OnInit {
     this.searchReasult = undefined;
   }
 
+  redirectToDetails(productId:number):void{
+    this.router.navigate([`details/${productId}`]);
+  }
+
   submitSearch(value:string):void{
     this.router.navigate([`search/${value}`]);
   }
