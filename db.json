@@ -75,7 +75,7 @@
       "category": "Mobiles",
       "description": "nice phone",
       "image": "https://lcdn.altex.ro/resize/media/catalog/product/T/e/2bd48d28d1c32adea0e55139a4e6434a/Telefon_APPLE_iPhone_13_5G_128GB_Midnight_4_.jpg",
-      "id":5
+      "id": 5
     },
     {
       "name": "jacket",
@@ -103,6 +103,26 @@
       "description": "nice phone",
       "image": "https://lcdn.altex.ro/resize/media/catalog/product/T/e/2bd48d28d1c32adea0e55139a4e6434a/Telefon_APPLE_iPhone_13_5G_128GB_Midnight_4_.jpg",
       "id": 8
+    }
+  ],
+  "users": [
+    {
+      "name": "ahmed",
+      "email": "ahmed@gmail.com",
+      "password": "ahmed123",
+      "id": 1
+    },
+    {
+      "name": "sayed",
+      "email": "sayed@gmail.com",
+      "password": "123",
+      "id": 2
+    },
+    {
+      "name": "belal",
+      "email": "belal@gmail.com",
+      "password": "123",
+      "id": 3
     }
   ]
 }
