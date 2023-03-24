@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { SignUp } from 'src/app/models/seller';
+import { SignUp, Login } from 'src/app/models/seller';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -9,6 +9,8 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./user-auth.component.css'],
 })
 export class UserAuthComponent implements OnInit {
+  showLogin: boolean = false;
+
   constructor(private userService: UserService, private router: Router) {}
 
   ngOnInit(): void {
@@ -22,6 +24,23 @@ export class UserAuthComponent implements OnInit {
         this.router.navigate(['/']);
       }
     });
+  }
+
+  login(data:Login):void{
+console.log(data);
+
+  }
+
+  openLogin(): void {
+    this.setShowLogin(true);
+  }
+
+  openSignUp(): void {
+    this.setShowLogin(false);
+  }
+
+  private setShowLogin(showLogin: boolean): void {
+    this.showLogin = showLogin;
   }
 
 }
