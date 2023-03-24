@@ -48,6 +48,7 @@
   text-decoration: none;
   color: blueviolet;
   font-size: 1.6rem;
+  cursor: pointer;
 }
 
 .suggested-result {
