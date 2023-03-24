@@ -26,9 +26,8 @@ export class UserAuthComponent implements OnInit {
     });
   }
 
-  login(data:Login):void{
-console.log(data);
-
+  login(data: Login): void {
+    this.userService.userLogin(data);
   }
 
   openLogin(): void {
@@ -42,5 +41,4 @@ console.log(data);
   private setShowLogin(showLogin: boolean): void {
     this.showLogin = showLogin;
   }
-
 }
