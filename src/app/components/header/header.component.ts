@@ -13,11 +13,21 @@ export class HeaderComponent implements OnInit {
   sellerName: string = '';
   searchReasult: undefined | Product[];
   userName: string = '';
+  cartItems: number = 0;
 
   constructor(private router: Router, private productService: ProductService) {}
 
   ngOnInit(): void {
     this.setMenuType();
+    this.setCartItems();
+  }
+
+  private setCartItems(): void {
+    let cartData=localStorage.getItem('localCart');
+    if(cartData) this.cartItems=JSON.parse(cartData).length;
+    this.productService.cartData.subscribe((items: Product[]) => {
+      this.cartItems = items.length;
+    });
   }
 
   private setMenuType(): void {
@@ -28,7 +38,7 @@ export class HeaderComponent implements OnInit {
           let sellerStore = localStorage.getItem('seller');
           let sellerData = sellerStore && JSON.parse(sellerStore)[0];
           this.sellerName = sellerData.name;
-        } else if(localStorage.getItem('user')){
+        } else if (localStorage.getItem('user')) {
           this.menuType = 'user';
           let userStore = localStorage.getItem('user');
           let userData = userStore && JSON.parse(userStore);
