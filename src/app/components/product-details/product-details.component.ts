@@ -31,4 +31,11 @@ export class ProductDetailsComponent implements OnInit {
     if (this.productQuantity > 1 && value === 'min') this.productQuantity -= 1;
   }
 
+  addToCart(): void {
+    if (this.productData) {
+      this.productData.quantity = this.productQuantity;
+      if (!localStorage.getItem('user'))  this.productService.localAddToCart(this.productData);
+    }
+  }
+
 }
