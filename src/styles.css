@@ -69,3 +69,13 @@ button {
   background-color: black;
   border: 5px;
 }
+
+.invalid-input{
+  color: red;
+  font-size: 1.2rem;
+  margin: -1rem;
+}
+
+button:disabled{
+  cursor: not-allowed;
+}

@@ -10,6 +10,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class UserAuthComponent implements OnInit {
   showLogin: boolean = false;
+  authError:string="";
 
   constructor(private userService: UserService, private router: Router) {}
 
@@ -28,6 +29,9 @@ export class UserAuthComponent implements OnInit {
 
   login(data: Login): void {
     this.userService.userLogin(data);
+    this.userService.invalidUserAuth.subscribe((result:boolean)=>{
+      if (result) this.authError="Please enter valid user details";
+    })
   }
 
   openLogin(): void {
