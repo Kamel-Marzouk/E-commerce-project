@@ -124,5 +124,18 @@
       "password": "123",
       "id": 3
     }
+  ],
+  "cart": [
+    {
+      "name": "T-Shirt",
+      "price": "750",
+      "color": "red",
+      "category": "clothes",
+      "description": "nice T-shirt",
+      "image": "https://img.mytheresa.com/1088/1088/66/jpeg/catalog/product/91/P00437309.jpg",
+      "quantity": 1,
+      "productId": 1,
+      "id": 1
+    }
   ]
 }

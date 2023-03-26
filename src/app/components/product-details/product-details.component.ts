@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Cart } from 'src/app/models/cart';
 import { Product } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
 
@@ -45,6 +46,19 @@ export class ProductDetailsComponent implements OnInit {
       if (!localStorage.getItem('user')) {
         this.productService.localAddToCart(this.productData);
         this.setRemoveCart(true);
+      }else{
+        let user = localStorage.getItem('user');
+        let userId = user && JSON.parse(user).id;
+        let cartData:Cart = {
+          ...this.productData,
+          userId,
+          productId:this.productData.id
+        };
+        delete cartData.id;
+        this.productService.addToCart(cartData).subscribe((result:Cart)=>{
+         if(result) alert("Product is added in cart succussfully")
+        })
+
       }
     }
   }
