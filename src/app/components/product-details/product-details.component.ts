@@ -13,6 +13,7 @@ export class ProductDetailsComponent implements OnInit {
   productData: undefined | Product;
   productQuantity: number = 1;
   removeCart: boolean = false;
+  cartData: undefined | Product;
 
   constructor(
     private route: ActivatedRoute,
@@ -48,7 +49,10 @@ export class ProductDetailsComponent implements OnInit {
           (product: Product) =>
             productId?.toString() === product.productId?.toString()
         );
-        if (items.length) this.setRemoveCart(true);
+        if (items.length) {
+          this.setRemoveCart(true);
+          this.cartData = items[0];
+        }
       });
     }
   }
@@ -87,7 +91,21 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   removeFromCart(productId: number): void {
-    this.productService.removeFromCart(productId);
+    if (!localStorage.getItem('user')) {
+      this.productService.removeFromCart(productId);
+    } else {
+      let user = localStorage.getItem('user');
+      let userId = user && JSON.parse(user)[0].id;
+      this.cartData &&
+        this.productService
+          .removeFromCartList(this.cartData.id)
+          .subscribe((result: any) => {
+            console.log(result);
+            if (result) {
+              this.productService.getCartList(userId);
+            }
+          });
+    }
     this.setRemoveCart(false);
   }
 
