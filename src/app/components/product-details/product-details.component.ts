@@ -26,10 +26,15 @@ export class ProductDetailsComponent implements OnInit {
   private getProductById(): void {
     const productId: null | string =
       this.route.snapshot.paramMap.get('productId');
-    if (productId)this.productService.getProductById(productId).subscribe((result: Product) => (this.productData = result));
+    if (productId)
+      this.productService
+        .getProductById(productId)
+        .subscribe((result: Product) => (this.productData = result));
     let cartData = localStorage.getItem('localCart');
     if (productId && cartData) {
-      let items = JSON.parse(cartData).filter((item: Product) => productId === item.id.toString());
+      let items = JSON.parse(cartData).filter(
+        (item: Product) => productId === item.id.toString()
+      );
       if (items.length) this.setRemoveCart(true);
       else this.setRemoveCart(false);
     }
@@ -39,14 +44,18 @@ export class ProductDetailsComponent implements OnInit {
       let userId = JSON.parse(user)[0].id;
       this.productService.getCartList(userId);
       this.productService.cartData.subscribe((result: Product[]) => {
-        let items: Product[] = result.filter((product: Product) =>productId?.toString() === product.productId?.toString());
-      if(items.length) this.setRemoveCart(true);
+        let items: Product[] = result.filter(
+          (product: Product) =>
+            productId?.toString() === product.productId?.toString()
+        );
+        if (items.length) this.setRemoveCart(true);
       });
     }
   }
 
   handleQuantity(value: string) {
-    if (this.productQuantity < 20 && value === 'plus')this.productQuantity += 1;
+    if (this.productQuantity < 20 && value === 'plus')
+      this.productQuantity += 1;
     if (this.productQuantity > 1 && value === 'min') this.productQuantity -= 1;
   }
 

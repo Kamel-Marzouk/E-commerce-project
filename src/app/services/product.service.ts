@@ -9,7 +9,7 @@ import { Cart } from 'src/app/models/cart';
 })
 export class ProductService {
   baseUrl: string = 'http://localhost:3000';
-  cartData=new EventEmitter<Product[]| []>();
+  cartData = new EventEmitter<Product[] | []>();
 
   constructor(private http: HttpClient) {}
 
@@ -22,7 +22,7 @@ export class ProductService {
   }
 
   deleteProduct(productId: number): Observable<any> {
-    return this.http.delete(`${this.baseUrl}/products/${productId}`,);
+    return this.http.delete(`${this.baseUrl}/products/${productId}`);
   }
 
   getProductById(productId: string): Observable<any> {
@@ -41,7 +41,7 @@ export class ProductService {
     return this.http.get<Product[]>(`${this.baseUrl}/products?limit=8`);
   }
 
-  searchProducts(query:string): Observable<any> {
+  searchProducts(query: string): Observable<any> {
     return this.http.get<Product[]>(`${this.baseUrl}/products?q=${query}`);
   }
 
@@ -51,8 +51,7 @@ export class ProductService {
     if (!localCart) {
       localStorage.setItem('localCart', JSON.stringify([data]));
       this.cartData.emit([data]);
-    }
-    else {
+    } else {
       cartData = JSON.parse(localCart);
       cartData.push(data);
       localStorage.setItem('localCart', JSON.stringify(cartData));
@@ -60,12 +59,14 @@ export class ProductService {
     this.cartData.emit(cartData);
   }
 
-  removeFromCart(productId:number):void{
+  removeFromCart(productId: number): void {
     let cartData = localStorage.getItem('localCart');
-    if(cartData){
-    let items:Product[] = JSON.parse(cartData).filter((item:Product)=>productId !== item.id );
-    localStorage.setItem('localCart', JSON.stringify(items));
-    this.cartData.emit(items);
+    if (cartData) {
+      let items: Product[] = JSON.parse(cartData).filter(
+        (item: Product) => productId !== item.id
+      );
+      localStorage.setItem('localCart', JSON.stringify(items));
+      this.cartData.emit(items);
     }
   }
 
@@ -82,5 +83,4 @@ export class ProductService {
         if (result && result.body) this.cartData.emit(result.body);
       });
   }
-
 }
