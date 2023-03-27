@@ -51,6 +51,7 @@ export class HeaderComponent implements OnInit {
   logout() {
     localStorage.removeItem('seller');
     this.router.navigate(['/']);
+    this.productService.cartData.emit([]);
   }
 
   logoutUser():void{

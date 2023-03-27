@@ -6,5 +6,6 @@ export interface Product{
   description:string,
   image:string,
   id:number,
-  quantity:undefined | number
+  quantity:undefined | number,
+  productId:undefined | number
 }
