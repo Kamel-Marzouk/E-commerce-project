@@ -136,6 +136,18 @@
       "quantity": 1,
       "productId": 1,
       "id": 1
+    },
+    {
+      "name": "I-phone 5",
+      "price": "17000",
+      "color": "black",
+      "category": "Mobiles",
+      "description": "nice phone",
+      "image": "https://lcdn.altex.ro/resize/media/catalog/product/T/e/2bd48d28d1c32adea0e55139a4e6434a/Telefon_APPLE_iPhone_13_5G_128GB_Midnight_4_.jpg",
+      "quantity": 6,
+      "productId": 2,
+      "userId": null,
+      "id": 2
     }
   ]
 }
