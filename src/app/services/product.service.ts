@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
 import { Product } from '../models/product';
 import { Observable } from 'rxjs';
-import { Cart } from 'src/app/models/cart';
+import { Cart, Order } from 'src/app/models/cart';
 
 @Injectable({
   providedIn: 'root',
@@ -92,5 +92,9 @@ export class ProductService {
     let userStore = localStorage.getItem('user');
     let userData = userStore && JSON.parse(userStore);
     return this.http.get<Cart[]>(`${this.baseUrl}/cart?userId=${userData[0].id}`);
+  }
+
+  orderNow(orderData: Order): Observable<any> {
+    return this.http.post(`${this.baseUrl}/orders`, orderData);
   }
 }

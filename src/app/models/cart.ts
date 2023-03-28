@@ -18,3 +18,11 @@ export interface PriceSummary {
   delivery: number;
   total: number;
 }
+
+export interface Order {
+  email: string;
+  address: string;
+  contact: string;
+  totalPrice:number;
+  userId:number
+}

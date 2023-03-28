@@ -209,5 +209,15 @@
       "userId": 1,
       "id": 7
     }
+  ],
+  "orders": [
+    {
+      "email": "ahmed@gmail.com",
+      "address": "Cairo Egypt",
+      "contact": "01116025665",
+      "totalPrice": 29850,
+      "userId": 1,
+      "id": 1
+    }
   ]
 }
