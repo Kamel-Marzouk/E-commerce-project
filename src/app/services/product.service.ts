@@ -87,4 +87,10 @@ export class ProductService {
   removeFromCartList(cartId: number): Observable<any> {
     return this.http.delete(`${this.baseUrl}/cart/${cartId}`);
   }
+
+  getCurrentCart(): Observable<any> {
+    let userStore = localStorage.getItem('user');
+    let userData = userStore && JSON.parse(userStore);
+    return this.http.get<Cart[]>(`${this.baseUrl}/cart?userId=${userData[0].id}`);
+  }
 }
