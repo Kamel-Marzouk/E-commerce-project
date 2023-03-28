@@ -4,7 +4,6 @@ import { HomeComponent } from './components/home/home.component';
 import { SellerAuthComponent } from './components/seller-auth/seller-auth.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
 import { LoginComponent } from './components/login/login.component';
-import { CartComponent } from './components/cart/cart.component';
 import { AuthGuard } from './guards/auth.guard';
 import { SellerHomeComponent } from './components/seller-home/seller-home.component';
 import { SellerAddProductComponent } from './components/seller-add-product/seller-add-product.component';
@@ -12,6 +11,7 @@ import { SellerUpdateProductComponent } from './components/seller-update-product
 import { SearchComponent } from './components/search/search.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { UserAuthComponent } from './components/user-auth/user-auth.component';
+import { CartPageComponent } from './components/cart-page/cart-page.component';
 
 const routes: Routes = [
   {
@@ -54,8 +54,8 @@ const routes: Routes = [
     component:LoginComponent
   },
   {
-    path:'cart',
-    component:CartComponent
+    path:'cart-page',
+    component:CartPageComponent
   },
   {
     path:'**',

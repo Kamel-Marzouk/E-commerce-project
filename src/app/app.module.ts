@@ -20,6 +20,7 @@ import { SearchComponent } from './components/search/search.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { UserAuthComponent } from './components/user-auth/user-auth.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CartPageComponent } from './components/cart-page/cart-page.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { FooterComponent } from './components/footer/footer.component';
     SearchComponent,
     ProductDetailsComponent,
     UserAuthComponent,
-    FooterComponent
+    FooterComponent,
+    CartPageComponent
   ],
   imports: [
     BrowserModule,
