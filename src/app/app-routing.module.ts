@@ -13,6 +13,7 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { UserAuthComponent } from './components/user-auth/user-auth.component';
 import { CartPageComponent } from './components/cart-page/cart-page.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { MyOrdersComponent } from './components/my-orders/my-orders.component';
 
 const routes: Routes = [
   {
@@ -61,6 +62,10 @@ const routes: Routes = [
   {
     path:'checkout',
     component:CheckoutComponent
+  },
+  {
+    path:'my-orders',
+    component:MyOrdersComponent
   },
   {
     path:'**',

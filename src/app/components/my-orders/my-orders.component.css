@@ -1,0 +1,18 @@
+.my-orders {
+  margin-bottom: 10rem;
+}
+
+.my-orders h1 {
+  margin: 5rem 0;
+  text-align: center;
+}
+
+.my-orders .order-img {
+  width: 100px;
+}
+
+.my-orders .row ,.my-orders .row .order-data {
+  margin: 1.5rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+}
