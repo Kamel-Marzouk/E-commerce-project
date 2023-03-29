@@ -97,4 +97,17 @@ export class ProductService {
   orderNow(orderData: Order): Observable<any> {
     return this.http.post(`${this.baseUrl}/orders`, orderData);
   }
+
+  getOrdersList(): Observable<any> {
+    let userStore = localStorage.getItem('user');
+    let userData = userStore && JSON.parse(userStore);
+    return this.http.get<Order[]>(`${this.baseUrl}/orders?userId=${userData[0].id}`);
+  }
+
+  deleteCartItems(cartId:number): any {
+    return this.http.delete(`${this.baseUrl}/cart/${cartId}`,{observe: 'response'}).subscribe((result:any)=>{
+      if(result) this.cartData.emit([]);
+    })
+  }
+
 }

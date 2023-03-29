@@ -125,91 +125,7 @@
       "id": 3
     }
   ],
-  "cart": [
-    {
-      "name": "T-Shirt",
-      "price": "750",
-      "color": "red",
-      "category": "clothes",
-      "description": "nice T-shirt",
-      "image": "https://img.mytheresa.com/1088/1088/66/jpeg/catalog/product/91/P00437309.jpg",
-      "quantity": 1,
-      "productId": 1,
-      "id": 1
-    },
-    {
-      "name": "T-Shirt",
-      "price": "750",
-      "color": "red",
-      "category": "clothes",
-      "description": "nice T-shirt",
-      "image": "https://img.mytheresa.com/1088/1088/66/jpeg/catalog/product/91/P00437309.jpg",
-      "quantity": 14,
-      "productId": 4,
-      "userId": 1,
-      "id": 2
-    },
-    {
-      "name": "jacket",
-      "color": "green",
-      "price": "1500",
-      "category": "clothes",
-      "description": "nice coat",
-      "image": "https://i.factcool.com/cache2/1400x1400/catalog/products/6/cc/556-cc-55027ce920221128131429_9911111202553.jpg",
-      "quantity": 1,
-      "productId": 3,
-      "userId": 1,
-      "id": 3
-    },
-    {
-      "name": "I-phone 5",
-      "price": "17000",
-      "color": "black",
-      "category": "Mobiles",
-      "description": "nice phone",
-      "image": "https://lcdn.altex.ro/resize/media/catalog/product/T/e/2bd48d28d1c32adea0e55139a4e6434a/Telefon_APPLE_iPhone_13_5G_128GB_Midnight_4_.jpg",
-      "quantity": 1,
-      "productId": 8,
-      "userId": 1,
-      "id": 4
-    },
-    {
-      "name": "T-Shirt",
-      "price": "750",
-      "color": "red",
-      "category": "clothes",
-      "description": "nice T-shirt",
-      "image": "https://img.mytheresa.com/1088/1088/66/jpeg/catalog/product/91/P00437309.jpg",
-      "quantity": 1,
-      "productId": 4,
-      "userId": 1,
-      "id": 5
-    },
-    {
-      "name": "T-Shirt",
-      "price": "750",
-      "color": "red",
-      "category": "clothes",
-      "description": "nice T-shirt",
-      "image": "https://img.mytheresa.com/1088/1088/66/jpeg/catalog/product/91/P00437309.jpg",
-      "quantity": 1,
-      "productId": 4,
-      "userId": 1,
-      "id": 6
-    },
-    {
-      "name": "T-Shirt",
-      "price": "750",
-      "color": "red",
-      "category": "clothes",
-      "description": "nice T-shirt",
-      "image": "https://img.mytheresa.com/1088/1088/66/jpeg/catalog/product/91/P00437309.jpg",
-      "quantity": 1,
-      "productId": 4,
-      "userId": 1,
-      "id": 7
-    }
-  ],
+  "cart": [],
   "orders": [
     {
       "email": "ahmed@gmail.com",
@@ -218,6 +134,30 @@
       "totalPrice": 29850,
       "userId": 1,
       "id": 1
+    },
+    {
+      "email": "ahmed@gmail.com",
+      "address": "alex Egypt",
+      "contact": "01016025665",
+      "totalPrice": 850,
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "email": "ahmed@gmail.com",
+      "address": "geza Egypt",
+      "contact": "01216025665",
+      "totalPrice": 68100,
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "email": "ahmed@gmail.com",
+      "address": "Mansoura Egypt",
+      "contact": "01516025665",
+      "totalPrice": 136100,
+      "userId": 1,
+      "id": 4
     }
   ]
 }
