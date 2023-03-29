@@ -9,7 +9,9 @@
       (blur)="hideSearch()"
       placeholder="Search for Products"
     />
-    <button class="search-button" (click)="submitSearch(searchInput.value)">Search</button>
+    <button class="search-button" (click)="submitSearch(searchInput.value)">
+      Search
+    </button>
     <ul class="suggested-result" *ngIf="searchReasult">
       <li *ngFor="let product of searchReasult">
         <a (mousedown)="redirectToDetails(product.id)">{{ product.name }}</a>
@@ -21,15 +23,21 @@
       <li class="link"><a routerLink="/"> Home</a></li>
       <li class="link"><a routerLink="/seller-auth"> Seller</a></li>
       <li class="link"><a routerLink="/user-auth"> Login / Signup</a></li>
-      <li class="link"><a routerLink="/cart-page"> Cart({{cartItems}})</a></li>
+      <li class="link">
+        <a routerLink="/cart-page"> Cart({{ cartItems }})</a>
+      </li>
     </ul>
     <ul *ngSwitchCase="'user'" class="nav-links">
       <li class="link"><a routerLink="/"> Home</a></li>
       <li class="link"><a routerLink="/seller-auth"> Seller</a></li>
-      <li class="link"><a routerLink="/user-auth"> {{userName | titlecase}}</a></li>
+      <li class="link">
+        <a routerLink="/user-auth"> {{ userName | titlecase }}</a>
+      </li>
       <li class="link"><a routerLink="/my-orders"> My Order </a></li>
       <li class="link"><a (click)="logoutUser()"> Logout </a></li>
-      <li class="link"><a routerLink="/cart-page"> Cart({{cartItems}})</a></li>
+      <li class="link">
+        <a routerLink="/cart-page"> Cart({{ cartItems }})</a>
+      </li>
     </ul>
     <ul *ngSwitchCase="'seller'" class="nav-links">
       <li class="link"><a routerLink="/seller-add-product"> Add Product</a></li>

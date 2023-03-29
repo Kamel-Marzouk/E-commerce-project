@@ -10,10 +10,10 @@ import { Router } from '@angular/router';
 })
 export class CheckoutComponent implements OnInit {
   totalPrice: undefined | number;
-  cartData:undefined | Cart[];
-  orderMsg:string|undefined;
+  cartData: undefined | Cart[];
+  orderMsg: string | undefined;
 
-  constructor(private productService:ProductService, private router : Router) {}
+  constructor(private productService: ProductService, private router: Router) {}
 
   ngOnInit(): void {
     this.getCurrentCart();
@@ -21,41 +21,40 @@ export class CheckoutComponent implements OnInit {
 
   private getCurrentCart(): void {
     this.productService.getCurrentCart().subscribe((result: any) => {
-      let price : number =0;
+      let price: number = 0;
       this.cartData = result;
       result.forEach((item: Cart) => {
-        if (item.quantity) price += (+item.price * +item.quantity);
+        if (item.quantity) price += +item.price * +item.quantity;
       });
-      this.totalPrice = price + (price / 10 + 100) - (price / 10);;
+      this.totalPrice = price + (price / 10 + 100) - price / 10;
     });
   }
 
-  orderNow(data: {email:string,address:string,contact:string}): void {
+  orderNow(data: { email: string; address: string; contact: string }): void {
     let user = localStorage.getItem('user');
     let userId = user && JSON.parse(user)[0].id;
-    if(this.totalPrice){
-      let orderData : Order = {
+    if (this.totalPrice) {
+      let orderData: Order = {
         ...data,
-        totalPrice:this.totalPrice,
+        totalPrice: this.totalPrice,
         userId,
-        id:undefined
+        id: undefined,
       };
 
-      this.cartData?.forEach((item:Cart)=>{
-      setTimeout(() => {
-        item.id && this.productService.deleteCartItems(item.id);
-      }, 700);
-      });
-      this.productService.orderNow(orderData).subscribe((result:any)=>{
-       if(result) {
-        this.orderMsg="Your order has been placed";
+      this.cartData?.forEach((item: Cart) => {
         setTimeout(() => {
-          this.router.navigate(['/my-orders']);
-          this.orderMsg=undefined;
-        }, 4000);
-      }
-      })
-
+          item.id && this.productService.deleteCartItems(item.id);
+        }, 700);
+      });
+      this.productService.orderNow(orderData).subscribe((result: any) => {
+        if (result) {
+          this.orderMsg = 'Your order has been placed';
+          setTimeout(() => {
+            this.router.navigate(['/my-orders']);
+            this.orderMsg = undefined;
+          }, 4000);
+        }
+      });
     }
   }
 }

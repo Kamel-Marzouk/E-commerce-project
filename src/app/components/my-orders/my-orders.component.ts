@@ -8,23 +8,24 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./my-orders.component.css'],
 })
 export class MyOrdersComponent implements OnInit {
-  orderData:Order[]|undefined;
+  orderData: Order[] | undefined;
 
-  constructor(private productService:ProductService) {}
+  constructor(private productService: ProductService) {}
 
   ngOnInit(): void {
     this.getAllOrders();
   }
 
-  private getAllOrders():void{
-    this.productService.getOrdersList().subscribe((ressult:any)=>{
-      this.orderData=ressult;
-    })
+  private getAllOrders(): void {
+    this.productService.getOrdersList().subscribe((result: any) => {
+      this.orderData = result;
+    });
   }
 
-  cancelOrder(orderId:number | undefined):void{
-    orderId && this.productService.deleteOrder(orderId).subscribe((result:any)=>{
-      if(result) this.getAllOrders();
-    })
+  cancelOrder(orderId: number | undefined): void {
+    orderId &&
+      this.productService.deleteOrder(orderId).subscribe((result: any) => {
+        if (result) this.getAllOrders();
+      });
   }
 }
