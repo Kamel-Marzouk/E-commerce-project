@@ -21,4 +21,10 @@ export class MyOrdersComponent implements OnInit {
       this.orderData=ressult;
     })
   }
+
+  cancelOrder(orderId:number | undefined):void{
+    orderId && this.productService.deleteOrder(orderId).subscribe((result:any)=>{
+      if(result) this.getAllOrders();
+    })
+  }
 }

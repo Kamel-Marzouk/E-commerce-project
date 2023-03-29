@@ -110,4 +110,8 @@ export class ProductService {
     })
   }
 
+  deleteOrder(orderId: number): Observable<any> {
+    return this.http.delete(`${this.baseUrl}/orders/${orderId}`);
+  }
+
 }

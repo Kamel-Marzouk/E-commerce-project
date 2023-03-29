@@ -142,22 +142,6 @@
       "totalPrice": 850,
       "userId": 1,
       "id": 2
-    },
-    {
-      "email": "ahmed@gmail.com",
-      "address": "geza Egypt",
-      "contact": "01216025665",
-      "totalPrice": 68100,
-      "userId": 1,
-      "id": 3
-    },
-    {
-      "email": "ahmed@gmail.com",
-      "address": "Mansoura Egypt",
-      "contact": "01516025665",
-      "totalPrice": 136100,
-      "userId": 1,
-      "id": 4
     }
   ]
 }
