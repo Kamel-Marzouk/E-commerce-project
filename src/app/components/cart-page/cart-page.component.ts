@@ -40,4 +40,13 @@ export class CartPageComponent implements OnInit {
   navigateToCheckout():void{
     this.router.navigate(['/checkout']);
   }
+
+  removeFromCart(cartId: number | undefined): void {
+    cartId &&
+      this.productService
+        .removeFromCartList(cartId)
+        .subscribe((result: any) => {
+          if (result) this.getCurrentCart();
+        });
+  }
 }
