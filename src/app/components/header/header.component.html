@@ -36,7 +36,9 @@
       <li class="link"><a routerLink="/my-orders"> My Order </a></li>
       <li class="link"><a (click)="logoutUser()"> Logout </a></li>
       <li class="link">
-        <a routerLink="/cart-page"> Cart({{ cartItems }})</a>
+        <a [routerLink]="cartItems > 0 ? '/cart-page' : null">
+          Cart({{ cartItems }})</a
+        >
       </li>
     </ul>
     <ul *ngSwitchCase="'seller'" class="nav-links">
