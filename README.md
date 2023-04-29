@@ -2,6 +2,18 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.2.
 
+## Installation
+
+Install the dependencies and devDependencies and start the application.
+
+```sh
+git clone https://github.com/Kamel-Marzouk/E-commerce-project.git
+cd E-commerce-project
+npm i
+json-server --watch db.json
+npm start Or ng serve
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
