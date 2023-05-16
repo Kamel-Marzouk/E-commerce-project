@@ -84,3 +84,12 @@ button:disabled{
 .max-width{
   width: 100%;
 }
+
+ /* direction */
+.ltr {
+    direction: ltr;
+}
+
+.rtl {
+    direction: rtl;
+}
