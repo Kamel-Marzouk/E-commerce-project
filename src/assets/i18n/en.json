@@ -1,0 +1,72 @@
+{
+  "header": {
+    "title": "E-commerce",
+    "targetLang": "ع",
+    "switchToLightMode": "Switch to Light Mode",
+    "switchToDarkMode": "Switch to Dark Mode",
+    "searchForProducts": "Search for Products",
+    "search": "Search",
+    "home": "Home",
+    "seller": "Seller",
+    "login": "Login",
+    "signup": "Signup",
+    "cart": "Cart",
+    "myOrder": "My Order",
+    "logout": "Logout",
+    "addProduct": "Add Product",
+    "productList": "Product List"
+  },
+  "home": {
+    "trendyProducts": "Trendy Products",
+    "price": "Price",
+    "color": "Color",
+    "viewDetails": "View Details",
+    "addToCart": "Add to Cart"
+  },
+  "cart": {
+    "title": "Cart Page",
+    "price": "Price",
+    "quantity": "Quantity",
+    "removeToCart": "Remove To Cart",
+    "summary": "Summary",
+    "amount": "Amount",
+    "tax": "Tax",
+    "delivery": "Delivery",
+    "discount": "Discount",
+    "total": "Total",
+    "checkout": "Checkout"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "addShippingAddress": "Add shipping address",
+    "emailPlaceholder": "Enter Your Email",
+    "addressPlaceholder": "Enter Your Address",
+    "contactPlaceholder": "Enter Contact Details",
+    "orderNow": "Order Now",
+    "totalAmount": "Total Amount",
+    "paymentMethod": "Payment Method",
+    "payOnDelivery": "Pay on Delivery"
+  },
+  "orders":{
+    "myOrders":"My Orders",
+    "orders":"Orders",
+    "orderId":"Order Id",
+    "price":"Price",
+    "status":"Status",
+    "inProgress":"In Progress",
+    "cancelOrder":"Cancel Order"
+  },
+  "product":{
+    "price":"Price",
+    "color":"Color",
+    "category":"category",
+    "buyNow":"Buy Now",
+    "description":"description",
+    "removeFromCart":"Remove from Cart",
+    "addToCart":"Add to Cart"
+  },
+  "notFound": {
+    "subheader": "The page you requested was not found",
+    "goHome": "Go Home"
+  }
+}

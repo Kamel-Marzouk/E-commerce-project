@@ -1,16 +1,17 @@
 <nav class="nav">
-  <h1><a routerLink="/">E-commerce</a></h1>
+  <h1><a routerLink="/">{{'header.title' | translate}}</a></h1>
   <div *ngIf="menuType !== 'seller'" class="nav-search">
     <input
       class="search-input"
+      [ngClass]="{'noneBorderRight': !translation.rtl, 'noneBorderLeft': translation.rtl}"
       #searchInput
       type="text"
       (keyup)="searchProducts($event)"
       (blur)="hideSearch()"
-      placeholder="Search for Products"
+      placeholder="{{'header.searchForProducts' | translate}}"
     />
-    <button class="search-button" (click)="submitSearch(searchInput.value)">
-      Search
+    <button class="search-button"  [ngClass]="{'noneBorderRight': translation.rtl, 'noneBorderLeft': !translation.rtl}" (click)="submitSearch(searchInput.value)">
+      {{'header.search' | translate}}
     </button>
     <ul class="suggested-result" *ngIf="searchReasult">
       <li *ngFor="let product of searchReasult">
@@ -20,34 +21,37 @@
   </div>
   <div [ngSwitch]="menuType">
     <ul *ngSwitchCase="'default'" class="nav-links">
-      <li class="link"><a routerLink="/"> Home</a></li>
-      <li class="link"><a routerLink="/seller-auth"> Seller</a></li>
-      <li class="link"><a routerLink="/user-auth"> Login / Signup</a></li>
+      <li class="link"><a routerLink="/"> {{'header.home' | translate}}</a></li>
+      <li class="link"><a routerLink="/seller-auth"> {{'header.seller' | translate}}</a></li>
+      <li class="link"><a routerLink="/user-auth"> {{'header.login' | translate}} / {{'header.signup' | translate}}</a></li>
       <li class="link">
-        <a routerLink="/cart-page"> Cart({{ cartItems }})</a>
+        <a routerLink="/cart-page"> {{'header.cart' | translate}}({{ cartItems }})</a>
       </li>
     </ul>
     <ul *ngSwitchCase="'user'" class="nav-links">
-      <li class="link"><a routerLink="/"> Home</a></li>
-      <li class="link"><a routerLink="/seller-auth"> Seller</a></li>
+      <li class="link"><a routerLink="/"> {{'header.home' | translate}}</a></li>
+      <li class="link"><a routerLink="/seller-auth"> {{'header.seller' | translate}}</a></li>
       <li class="link">
         <a routerLink="/user-auth"> {{ userName | titlecase }}</a>
       </li>
-      <li class="link"><a routerLink="/my-orders"> My Order </a></li>
-      <li class="link"><a (click)="logoutUser()"> Logout </a></li>
+      <li class="link"><a routerLink="/my-orders"> {{'header.myOrder' | translate}} </a></li>
+      <li class="link"><a (click)="logoutUser()"> {{'header.logout' | translate}} </a></li>
       <li class="link">
         <a [routerLink]="cartItems > 0 ? '/cart-page' : null">
-          Cart({{ cartItems }})</a
+          {{'header.cart' | translate}}({{ cartItems }})</a
         >
       </li>
     </ul>
     <ul *ngSwitchCase="'seller'" class="nav-links">
-      <li class="link"><a routerLink="/seller-add-product"> Add Product</a></li>
-      <li class="link"><a routerLink="/seller-home"> Product List</a></li>
-      <li class="link"><a (click)="logout()"> Logout</a></li>
+      <li class="link"><a routerLink="/seller-add-product"> {{'header.addProduct' | translate}}</a></li>
+      <li class="link"><a routerLink="/seller-home"> {{'header.productList' | translate}}</a></li>
+      <li class="link"><a (click)="logout()"> {{'header.logout' | translate}}</a></li>
       <li class="link">
         <a> {{ sellerName | titlecase }}</a>
       </li>
     </ul>
+  </div>
+  <div class="language">
+    <span class="lang" (click)="translation.switchLanguage()">{{'header.targetLang'|translate}}</span>
   </div>
 </nav>
