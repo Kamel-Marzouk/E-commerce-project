@@ -1,9 +1,9 @@
 <div class="checkout">
-  <h1>Checkout</h1>
+  <h1>{{'checkout.title' | translate}}</h1>
   <p class="message-p">{{ orderMsg }}</p>
   <div class="row">
     <div class="col-sm-7">
-      <h3>Add shipping address</h3>
+      <h3>{{'checkout.addShippingAddress' | translate}}</h3>
       <form
         class="common-form"
         #orderData="ngForm"
@@ -13,7 +13,7 @@
           class="form-input"
           type="text"
           name="email"
-          placeholder="Enter Your Email"
+          placeholder="{{'checkout.emailPlaceholder' | translate}}"
           ngModel
           #email="ngModel"
         />
@@ -21,7 +21,7 @@
           class="form-input"
           type="text"
           name="address"
-          placeholder="Enter Your Address"
+          placeholder="{{'checkout.addressPlaceholder' | translate}}"
           ngModel
           #address="ngModel"
         />
@@ -29,16 +29,16 @@
           class="form-input"
           type="text"
           name="contact"
-          placeholder="Enter Contact Details "
+          placeholder="{{'checkout.contactPlaceholder' | translate}}"
           ngModel
           #contact="ngModel"
         />
-        <button class="form-button">Order Now</button>
+        <button class="form-button">{{'checkout.orderNow' | translate}}</button>
       </form>
     </div>
     <div class="col-sm-5">
-      <h3>Total Amount : {{ totalPrice }}</h3>
-      <h4>Payment Method : <b>Pay on Delivery</b></h4>
+      <h3>{{'checkout.totalAmount' | translate}} : {{ totalPrice }}</h3>
+      <h4>{{'checkout.paymentMethod' | translate}} : <b>{{'checkout.payOnDelivery' | translate}}</b></h4>
     </div>
   </div>
 </div>

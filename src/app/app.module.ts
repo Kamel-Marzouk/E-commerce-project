@@ -7,7 +7,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { SellerAuthComponent } from './components/seller-auth/seller-auth.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
-import { LoginComponent } from './components/login/login.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { SellerHomeComponent } from './components/seller-home/seller-home.component';
@@ -36,7 +35,6 @@ export function createTranslateLoader(http: HttpClient) {
     HomeComponent,
     SellerAuthComponent,
     PagenotfoundComponent,
-    LoginComponent,
     SellerHomeComponent,
     SellerAddProductComponent,
     SellerUpdateProductComponent,

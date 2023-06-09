@@ -1,4 +1,7 @@
-<div>
-  <h1>404 Error</h1>
-  <h1>Page Not Found</h1>
+<div class="page-container">
+  <span class="title">404</span>
+  <span class="message">{{ "notFound.subheader" | translate }}</span>
+  <button class="home-button" (click)="goHome()">
+    {{ "notFound.goHome" | translate }}
+  </button>
 </div>
