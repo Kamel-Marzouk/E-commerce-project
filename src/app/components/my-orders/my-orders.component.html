@@ -1,20 +1,20 @@
 <div class="my-orders">
-  <h1>My Orders</h1>
+  <h1>{{'orders.myOrders' | translate}}</h1>
   <div class="row">
     <div class="col-sm-2">
-      <span>Orders</span>
+      <span>{{'orders.orders' | translate}}</span>
     </div>
     <div class="col-sm-2">
-      <span>Order Id</span>
+      <span>{{'orders.orderId' | translate}}</span>
     </div>
     <div class="col-sm-2">
-      <span>Price</span>
+      <span>{{'orders.price' | translate}}</span>
     </div>
     <div class="col-sm-2">
-      <span>Status</span>
+      <span>{{'orders.status' | translate}}</span>
     </div>
     <div class="col-sm-2">
-      <span>Cancel Order</span>
+      <span>{{'orders.cancelOrder' | translate}}</span>
     </div>
   </div>
   <div class="row" *ngFor="let order of orderData">
@@ -32,11 +32,11 @@
       <span>{{ order.totalPrice }}</span>
     </div>
     <div class="col-sm-2">
-      <span>In Progress</span>
+      <span>{{'orders.inProgress' | translate}}</span>
     </div>
     <div class="col-sm-2">
       <button class="form-button" (click)="cancelOrder(order.id)">
-        Cancel Order
+        {{'orders.cancelOrder' | translate}}
       </button>
     </div>
   </div>

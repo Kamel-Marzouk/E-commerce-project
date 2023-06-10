@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { SellerAuthComponent } from './components/seller-auth/seller-auth.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
-import { LoginComponent } from './components/login/login.component';
 import { AuthGuard } from './guards/auth.guard';
 import { SellerHomeComponent } from './components/seller-home/seller-home.component';
 import { SellerAddProductComponent } from './components/seller-add-product/seller-add-product.component';
@@ -50,10 +49,6 @@ const routes: Routes = [
   {
     path:'user-auth',
     component:UserAuthComponent
-  },
-  {
-    path:'login',
-    component:LoginComponent
   },
   {
     path:'cart-page',

@@ -1,5 +1,5 @@
 <div class="add-product">
-  <h1>Add New Product</h1>
+  <h1>{{'product.addNewProduct' | translate}}</h1>
   <p class="message-p">{{addProductMessage}}</p>
   <form class="common-form" #addProduct="ngForm" (ngSubmit)="submit(addProduct.value)">
     <input
@@ -7,43 +7,43 @@
       type="text"
       ngModel
       name="name"
-      placeholder="Enter Product Name"
+      placeholder="{{'product.productNamePlaceholder' | translate}}"
     />
     <input
       class="form-input"
       type="text"
       ngModel
       name="color"
-      placeholder="Enter Product Color"
+      placeholder="{{'product.productColorPlaceholder' | translate}}"
     />
     <input
       class="form-input"
       type="text"
       ngModel
       name="price"
-      placeholder="Enter Product Price"
+      placeholder="{{'product.productPricePlaceholder' | translate}}"
     />
     <input
       class="form-input"
       type="text"
       ngModel
       name="category"
-      placeholder="Enter Product Category"
+      placeholder="{{'product.productCategoryPlaceholder' | translate}}"
     />
     <textarea
       class="form-input"
       type="text"
       ngModel
       name="description"
-      placeholder="Enter Product Description"
+      placeholder="{{'product.productDescriptionPlaceholder' | translate}}"
     ></textarea>
     <input
       class="form-input"
       type="text"
       ngModel
       name="image"
-      placeholder="Enter Product Image URL"
+      placeholder="{{'product.productImageURLPlaceholder' | translate}}"
     />
-    <button class="form-button">Add Product</button>
+    <button class="form-button">{{'product.addProduct' | translate}}</button>
   </form>
 </div>

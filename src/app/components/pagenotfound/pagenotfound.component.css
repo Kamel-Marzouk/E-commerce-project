@@ -1,0 +1,30 @@
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.title {
+  color: blueviolet;
+  font-size: 8rem;
+  margin-bottom: 2rem;
+}
+
+.message {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.home-button{
+  border: 1px solid blueviolet;
+  color: blueviolet;
+  height: 3.5rem;
+  cursor: pointer;
+  padding: 2rem;
+    display: flex;
+    align-items: center;
+
+}

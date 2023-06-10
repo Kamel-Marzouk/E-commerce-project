@@ -7,10 +7,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { SellerAuthComponent } from './components/seller-auth/seller-auth.component';
 import { PagenotfoundComponent } from './components/pagenotfound/pagenotfound.component';
-import { LoginComponent } from './components/login/login.component';
-import { CartComponent } from './components/cart/cart.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { SellerHomeComponent } from './components/seller-home/seller-home.component';
 import { SellerAddProductComponent } from './components/seller-add-product/seller-add-product.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -23,6 +21,12 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CartPageComponent } from './components/cart-page/cart-page.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { MyOrdersComponent } from './components/my-orders/my-orders.component';
+import { TranslateModule , TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 
 @NgModule({
   declarations: [
@@ -31,8 +35,6 @@ import { MyOrdersComponent } from './components/my-orders/my-orders.component';
     HomeComponent,
     SellerAuthComponent,
     PagenotfoundComponent,
-    LoginComponent,
-    CartComponent,
     SellerHomeComponent,
     SellerAddProductComponent,
     SellerUpdateProductComponent,
@@ -50,7 +52,14 @@ import { MyOrdersComponent } from './components/my-orders/my-orders.component';
     FormsModule,
     HttpClientModule,
     FontAwesomeModule,
-    NgbModule
+    NgbModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: (createTranslateLoader),
+        deps: [HttpClient]
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
