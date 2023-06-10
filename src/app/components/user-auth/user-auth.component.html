@@ -1,6 +1,6 @@
 <div class="user-auth">
   <div class="user-signup" *ngIf="!showLogin">
-    <h1>User Sign-up</h1>
+    <h1>{{'user.userSignUp' | translate}}</h1>
     <form
       class="common-form"
       #userSignup="ngForm"
@@ -11,7 +11,7 @@
         type="text"
         name="name"
         id=""
-        placeholder="Enter Your Name"
+        placeholder="{{'user.namePlaceholder' | translate}}"
         ngModel
       />
       <input
@@ -19,7 +19,7 @@
         type="text"
         name="email"
         id=""
-        placeholder="Enter Your Email"
+        placeholder="{{'user.emailPlaceholder' | translate}}"
         ngModel
       />
       <input
@@ -27,17 +27,17 @@
         type="password"
         name="password"
         id=""
-        placeholder="Enter Your Password"
+        placeholder="{{'user.passwordPlaceholder' | translate}}"
         ngModel
       />
-      <button class="form-button">Sign Up</button>
+      <button class="form-button">{{'user.signUp' | translate}}</button>
       <a class="auth-toggle-link" (click)="openLogin()"
-        >Already Have Account? Click To Login</a
+        >{{'user.loginLink' | translate}}</a
       >
     </form>
   </div>
   <div class="user-login" *ngIf="showLogin">
-    <h1>User Login</h1>
+    <h1>{{'user.userLogin' | translate}}</h1>
     <form
       class="common-form"
       #userLogin="ngForm"
@@ -49,29 +49,29 @@
         type="text"
         name="email"
         id=""
-        placeholder="Enter Your Email"
+        placeholder="{{'user.emailPlaceholder' | translate}}"
         ngModel
         #email="ngModel"
         required
         email
       />
-      <p class="invalid-input" *ngIf="email.invalid && email.touched"><span>Please enter valid email</span></p>
+      <p class="invalid-input" *ngIf="email.invalid && email.touched"><span>{{'user.validationEmailMessage' | translate}}</span></p>
       <input
         class="form-input"
         type="password"
         name="password"
         id=""
-        placeholder="Enter Your Password"
+        placeholder="{{'user.passwordPlaceholder' | translate}}"
         ngModel
         #password="ngModel"
         required
         minlength="2"
         maxlength="20"
       />
-      <p class="invalid-input" *ngIf="password.invalid && password.touched"><span>Please enter valid password</span></p>
-      <button [disabled]="userLogin.invalid" class="form-button">Login</button>
+      <p class="invalid-input" *ngIf="password.invalid && password.touched"><span>{{'user.validationPasswordMessage' | translate}}</span></p>
+      <button [disabled]="userLogin.invalid" class="form-button">{{'user.login' | translate}}</button>
       <a class="auth-toggle-link" (click)="openSignUp()"
-        >Don't Have Account? Click For Sign-Up</a
+      >{{'user.signUpLink' | translate}}</a
       >
     </form>
   </div>

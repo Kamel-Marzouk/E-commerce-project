@@ -1,5 +1,5 @@
 <div class="update-product">
-  <h1>Update Product</h1>
+  <h1>{{'seller.updateProduct' | translate}}</h1>
   <p class="message-p">{{productMessage}}</p>
   <form class="common-form" #updateProduct="ngForm" (ngSubmit)="submit(updateProduct.value)">
     <input
@@ -7,43 +7,43 @@
       type="text"
       ngModel="{{ productData?.name }}"
       name="name"
-      placeholder="Enter Product Name"
+      placeholder="{{'seller.productNamePlaceholder' | translate}}"
     />
     <input
       class="form-input"
       type="text"
       ngModel="{{ productData?.color }}"
       name="color"
-      placeholder="Enter Product Color"
+      placeholder="{{'seller.productColorPlaceholder' | translate}}"
     />
     <input
       class="form-input"
       type="text"
       ngModel="{{ productData?.price }}"
       name="price"
-      placeholder="Enter Product Price"
+      placeholder="{{'seller.productPricePlaceholder' | translate}}"
     />
     <input
       class="form-input"
       type="text"
       ngModel="{{ productData?.category }}"
       name="category"
-      placeholder="Enter Product Category"
+      placeholder="{{'seller.productCategoryPlaceholder' | translate}}"
     />
     <textarea
       class="form-input"
       type="text"
       ngModel="{{ productData?.description }}"
       name="description"
-      placeholder="Enter Product Description"
+      placeholder="{{'seller.productDescriptionPlaceholder' | translate}}"
     ></textarea>
     <input
       class="form-input"
       type="text"
       ngModel="{{ productData?.image }}"
       name="image"
-      placeholder="Enter Product Image URL"
+      placeholder="{{'seller.productImagePlaceholder' | translate}}"
     />
-    <button class="form-button">Update Product</button>
+    <button class="form-button">{{'seller.updateProduct' | translate}}</button>
   </form>
 </div>

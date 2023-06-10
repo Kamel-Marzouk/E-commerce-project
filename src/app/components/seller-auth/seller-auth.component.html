@@ -1,7 +1,7 @@
 <div class="seller-auth">
   <!-- Sign-Up Area -->
   <div *ngIf="!showLogin" class="sign-up">
-    <h1>Seller Sign-Up</h1>
+    <h1>{{'seller.sellerSignUp' | translate}}</h1>
     <form
       #sellerSignUp="ngForm"
       (ngSubmit)="signUp(sellerSignUp.value)"
@@ -12,31 +12,30 @@
         type="text"
         ngModel
         name="name"
-        placeholder="Enter your Name"
+        placeholder="{{'seller.namePlaceholder' | translate}}"
       />
       <input
         class="form-input"
         type="password"
         ngModel
         name="password"
-        placeholder="Enter your Password"
+        placeholder="{{'seller.passwordPlaceholder' | translate}}"
       />
       <input
         class="form-input"
         type="text"
         ngModel
         name="email"
-        placeholder="Enter your Email"
+        placeholder="{{'seller.emailPlaceholder' | translate}}"
       />
-      <button class="form-button">SignUp</button>
+      <button class="form-button">{{'seller.signUp' | translate}}</button>
       <a class="auth-toggle-link" (click)="openLogin()"
-        >Already Have Account? Click To Login</a
-      >
+        >{{'seller.loginLink' | translate}}</a>
     </form>
   </div>
   <!-- Login Area -->
   <div *ngIf="showLogin" class="login">
-    <h1>Seller Login</h1>
+    <h1>{{'seller.sellerLogin' | translate}}</h1>
     <p *ngIf="authError" class="error-p">{{authError}}</p>
     <form
       #sellerLogin="ngForm"
@@ -48,18 +47,18 @@
         type="text"
         ngModel
         name="email"
-        placeholder="Enter your Email"
+        placeholder="{{'seller.emailPlaceholder' | translate}}"
       />
       <input
         class="form-input"
         type="password"
         ngModel
         name="password"
-        placeholder="Enter your Password"
+        placeholder="{{'seller.passwordPlaceholder' | translate}}"
       />
-      <button class="form-button">Login</button>
+      <button class="form-button">{{'seller.login' | translate}}</button>
       <a class="auth-toggle-link" (click)="openSignUp()"
-        >Don't Have Account? Click For Sign-Up</a
+        >{{'seller.signUpLink' | translate}}</a
       >
     </form>
   </div>
